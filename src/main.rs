@@ -18,7 +18,7 @@ struct AppState {
 }
 
 struct AppWrapper {
-    state: Arc<MutexAppState>,
+    state: Arc<Mutex<AppState>>,
 }
 
 impl eframe::App for AppWrapper {
